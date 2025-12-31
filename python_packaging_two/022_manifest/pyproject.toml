@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator_pkg_ex"
+version = "0.10.0"
+dependencies = [
+    "tqdm~=4.0"
+]
+
+[project.scripts]
+calculator_pkg_ex = "calculator_pkg_ex.__main__:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest==9.0.2",
+    "mypy==1.19.1",
+    "ruff==0.14.10",
+    "pre-commit==4.5.1",
+    "tox==4.32.0",
+    "types-tqdm==4.67.0.20250809"
+]
